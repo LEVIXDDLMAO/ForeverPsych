@@ -1,3 +1,2 @@
 # Friday Night Funkin' - Infinity Engine
-basically normal psych engine!
-[](logo.png)
+basically normal psych engine![](logo.png)
