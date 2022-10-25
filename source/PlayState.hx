@@ -3304,14 +3304,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		/* if (combo > 60)
-				daRating = 'sick';
-			else if (combo > 12)
-				daRating = 'good'
-			else if (combo > 4)
-				daRating = 'bad';
-		 */
-
 		var pixelShitPart1:String = "";
 		var pixelShitPart2:String = '';
 
@@ -3401,8 +3393,7 @@ class PlayState extends MusicBeatState
 			numScore.velocity.x = FlxG.random.float(-5, 5);
 			numScore.visible = !ClientPrefs.hideHud;
 
-			if (combo >= 10 || combo == 0)
-				insert(members.indexOf(strumLineNotes), numScore);
+			insert(members.indexOf(strumLineNotes), numScore);
 
 			FlxTween.tween(numScore, {alpha: 0}, 0.2, {
 				onComplete: function(tween:FlxTween)
@@ -3414,13 +3405,8 @@ class PlayState extends MusicBeatState
 
 			daLoop++;
 		}
-		/* 
-			trace(combo);
-			trace(seperatedScore);
-		 */
 
 		coolText.text = Std.string(seperatedScore);
-		// add(coolText);
 
 		FlxTween.tween(rating, {alpha: 0}, 0.2, {
 			startDelay: Conductor.crochet * 0.001
