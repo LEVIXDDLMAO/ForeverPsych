@@ -31,3 +31,5 @@ basically normal psych engine![](logo.png)
 - new hp bar
 - erect diff
 # think thats all :D have fun!!
+hello quick thing if you wanna add shit feel free to fork and push things!
+ill take alook and see if they work :D
