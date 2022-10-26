@@ -3393,10 +3393,8 @@ class PlayState extends MusicBeatState
 			numScore.velocity.x = FlxG.random.float(-5, 5);
 			numScore.visible = !ClientPrefs.hideHud;
 
-			if (numScore.animation.curAnim.name != '0' && combo < 9) {
-				add(numScore);
-				insert(members.indexOf(strumLineNotes), numScore);
-			}
+			add(numScore);
+			insert(members.indexOf(strumLineNotes), numScore);
 
 			FlxTween.tween(numScore, {alpha: 0}, 0.2, {
 				onComplete: function(tween:FlxTween)
