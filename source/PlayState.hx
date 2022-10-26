@@ -297,7 +297,6 @@ class PlayState extends MusicBeatState
 		practiceMode = ClientPrefs.getGameplaySetting('practice', false);
 		cpuControlled = ClientPrefs.getGameplaySetting('botplay', false);
 
-		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
@@ -895,8 +894,6 @@ class PlayState extends MusicBeatState
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
 
-		// startCountdown();
-
 		generateSong(SONG.song);
 		#if LUA_ALLOWED
 		for (notetype in noteTypeMap.keys())
@@ -1029,13 +1026,7 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
-		// if (SONG.song == 'South')
-		// FlxG.camera.alpha = 0.7;
-		// UI_camera.zoom = 1;
-
-		// cameras = [FlxG.cameras.list[1]];
 		startingSong = true;
-
 
 		// SONG SPECIFIC SCRIPTS
 		#if LUA_ALLOWED
@@ -3249,11 +3240,14 @@ class PlayState extends MusicBeatState
 		vocals.volume = 1;
 
 		var placement:String = Std.string(combo);
+		var negative = false;
+		if ((placement.startsWith('-')) || (combo == 0))
+			negative = true;
+		var stringArray:Array<String> = placement.split("");
 
 		var coolText:FlxText = new FlxText(0, 0, 0, placement, 32);
 		coolText.screenCenter();
 		coolText.x = FlxG.width * 0.35;
-		//
 
 		var rating:FlxSprite = new FlxSprite();
 		var score:Int = 350;
@@ -3276,7 +3270,6 @@ class PlayState extends MusicBeatState
 				totalNotesHit += 1;
 				sicks++;
 		}
-
 
 		if(daRating == 'sick' && !note.noteSplashDisabled)
 		{
@@ -3366,7 +3359,7 @@ class PlayState extends MusicBeatState
 		seperatedScore.push(combo % 10);
 
 		var daLoop:Int = 0;
-		for (i in seperatedScore)
+		/*for (i in seperatedScore)
 		{
 			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'num' + Std.int(i) + pixelShitPart2));
 			numScore.cameras = [camHUD];
@@ -3405,6 +3398,20 @@ class PlayState extends MusicBeatState
 			});
 
 			daLoop++;
+		}*/
+
+		for (scoreInt in 0...stringArray.length)
+		{
+			// numScore.loadGraphic(Paths.image('UI/' + pixelModifier + 'num' + stringArray[scoreInt]));
+			var numScore = ForeverAssets.generateCombo('combo', stringArray[scoreInt], scoreInt);
+			add(numScore);
+			// centers combo
+			numScore.y += 10;
+			numScore.x -= 95;
+			numScore.x -= ((comboString.length - 1) * 22);
+			lastCombo.push(numScore);
+			FlxTween.tween(numScore, {y: numScore.y + 20}, 0.1, {type: FlxTweenType.BACKWARD, ease: FlxEase.circOut});
+			numScore.x += 100;
 		}
 
 		coolText.text = Std.string(seperatedScore);

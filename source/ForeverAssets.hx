@@ -13,8 +13,7 @@ using StringTools;
 **/
 class ForeverAssets
 {
-	public static function generateCombo(asset:String, number:String, allSicks:Bool, assetModifier:String = 'base', changeableSkin:String = 'default',
-			baseLibrary:String, negative:Bool, createdColor:FlxColor, scoreInt:Int):FlxSprite
+	public static function generateCombo(asset:String, number:String, scoreInt:Int):FlxSprite
 	{
 		var width = 100;
 		var height = 140;
