@@ -3393,7 +3393,7 @@ class PlayState extends MusicBeatState
 			numScore.velocity.x = FlxG.random.float(-5, 5);
 			numScore.visible = !ClientPrefs.hideHud;
 
-			if (numScore.animation.curAnim != '0' && combo < 9) {
+			if (numScore.animation.curAnim.name != '0' && combo < 9) {
 				add(numScore);
 				insert(members.indexOf(strumLineNotes), numScore);
 			}
