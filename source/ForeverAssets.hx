@@ -52,12 +52,9 @@ class ForeverAssets
 			newSprite.setGraphicSize(Std.int(newSprite.width * 0.5));
 		}
 		newSprite.updateHitbox();
-		if (!Init.trueSettings.get('Simply Judgements'))
-		{
-			newSprite.acceleration.y = FlxG.random.int(200, 300);
-			newSprite.velocity.y = -FlxG.random.int(140, 160);
-			newSprite.velocity.x = FlxG.random.float(-5, 5);
-		}
+		newSprite.acceleration.y = FlxG.random.int(200, 300);
+		newSprite.velocity.y = -FlxG.random.int(140, 160);
+		newSprite.velocity.x = FlxG.random.float(-5, 5);
 
 		return newSprite;
 	}
