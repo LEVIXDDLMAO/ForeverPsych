@@ -41,17 +41,17 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
-		var option:Option = new Option('Note Underlay Transparency',
-			'How visible the note backgrounds should be.',
-			'underlayAlpha',
+		var option:Option = new Option('Lane Underlay Visibility',
+			'Sets visibility of lane underlay.',
+			'underlaneVisibility',
 			'percent',
 			0);
-		option.scrollSpeed = 1.6;
+		addOption(option);	
+		option.scrollSpeed = 1;
 		option.minValue = 0.0;
 		option.maxValue = 1;
 		option.changeValue = 0.1;
 		option.decimals = 1;
-		addOption(option);
 
 		var option:Option = new Option('Hide HUD',
 			'If checked, hides most HUD elements.',

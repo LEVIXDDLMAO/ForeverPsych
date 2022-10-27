@@ -108,8 +108,11 @@ class PlayState extends MusicBeatState
 	public var dadGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
 
-	var underlayPlayer:FlxSprite;
-	var underlayOpponent:FlxSprite;
+	// os engine code
+	public var laneunderlay:FlxSprite;
+	public var laneunderlayOp:FlxSprite;
+	var trailunderdad:FlxTrail;
+	var trailunderbf:FlxTrail;
 
 	public static var curStage:String = '';
 	public static var isPixelStage:Bool = false;
@@ -871,17 +874,16 @@ class PlayState extends MusicBeatState
 		add(timeBarBG);
 
 
-		underlayPlayer = new FlxSprite(0, 0).makeGraphic(1, 1, FlxColor.BLACK);
-		underlayPlayer.scrollFactor.set();
-		underlayPlayer.alpha = ClientPrefs.underlayAlpha;
-		underlayPlayer.visible = false;
-		add(underlayPlayer);
-
-		underlayOpponent = new FlxSprite(0, 0).makeGraphic(1, 1, FlxColor.BLACK);
-		underlayOpponent.scrollFactor.set();
-		underlayOpponent.alpha = ClientPrefs.underlayAlpha;
-		underlayOpponent.visible = false;
-		add(underlayOpponent);
+		laneunderlay = new FlxSprite(0, 0).makeGraphic(110 * 4 + 50, FlxG.height * 2);
+		laneunderlay.color = FlxColor.BLACK;
+		laneunderlay.scrollFactor.set();
+        laneunderlay.alpha = ClientPrefs.underlaneVisibility - 1;
+        laneunderlay.visible = true;
+		if (!ClientPrefs.middleScroll) 
+		{
+			add(laneunderlayOp);
+		  }
+	  	add(laneunderlay);
 
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
@@ -2938,7 +2940,7 @@ class PlayState extends MusicBeatState
 						}
 						setOnLuas('gfName', gf.curCharacter);
 				}
-				reloadHealthBarColors();
+			reloadHealthBarColors();
 			
 			case 'BG Freaks Expression':
 				if(bgGirls != null) bgGirls.swapDanceType();

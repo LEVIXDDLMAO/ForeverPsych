@@ -25,7 +25,8 @@ class ClientPrefs {
 	public static var ghostTapping:Bool = true;
 	public static var timeBarType:String = 'Time Left';
 	public static var scoreZoom:Bool = true;
-	public static var underlayAlpha:Float = 0;
+	public static var underlaneVisibility:Float = 0;
+	public static var characterTrail:Bool = false;
 	public static var noReset:Bool = false;
 	public static var healthBarAlpha:Float = 1;
 	public static var controllerMode:Bool = false;
@@ -96,7 +97,8 @@ class ClientPrefs {
 		FlxG.save.data.noteOffset = noteOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.arrowHSV = arrowHSV;
-		FlxG.save.data.underlayAlpha = underlayAlpha;
+		FlxG.save.data.underlaneVisibility = underlaneVisibility;
+		FlxG.save.data.characterTrail = characterTrail;
 		FlxG.save.data.imagesPersist = imagesPersist;
 		FlxG.save.data.ghostTapping = ghostTapping;
 		FlxG.save.data.timeBarType = timeBarType;
@@ -218,9 +220,12 @@ class ClientPrefs {
 		if(FlxG.save.data.controllerMode != null) {
 			controllerMode = FlxG.save.data.controllerMode;
 		}
-	    if (FlxG.save.data.underlayAlpha != null) {
-		    underlayAlpha = FlxG.save.data.underlayAlpha;
-	    }
+		if(FlxG.save.data.underlaneVisibility != null) {
+			underlaneVisibility = FlxG.save.data.underlaneVisibility;
+		}
+		if(FlxG.save.data.characterTrail != null) {
+			characterTrail = FlxG.save.data.characterTrail;
+		}
 		if(FlxG.save.data.gameplaySettings != null)
 		{
 			var savedMap:Map<String, Dynamic> = FlxG.save.data.gameplaySettings;
