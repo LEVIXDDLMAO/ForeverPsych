@@ -218,6 +218,9 @@ class ClientPrefs {
 		if(FlxG.save.data.controllerMode != null) {
 			controllerMode = FlxG.save.data.controllerMode;
 		}
+	    if (FlxG.save.data.underlayAlpha != null) {
+		    underlayAlpha = FlxG.save.data.underlayAlpha;
+	    }
 		if(FlxG.save.data.gameplaySettings != null)
 		{
 			var savedMap:Map<String, Dynamic> = FlxG.save.data.gameplaySettings;
