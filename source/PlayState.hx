@@ -108,6 +108,9 @@ class PlayState extends MusicBeatState
 	public var dadGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
 
+	var underlayPlayer:FlxSprite;
+	var underlayOpponent:FlxSprite;
+
 	public static var curStage:String = '';
 	public static var isPixelStage:Bool = false;
 	public static var SONG:SwagSong = null;
@@ -866,6 +869,19 @@ class PlayState extends MusicBeatState
 		timeBarBG.xAdd = -4;
 		timeBarBG.yAdd = -4;
 		add(timeBarBG);
+
+
+		underlayPlayer = new FlxSprite(0, 0).makeGraphic(1, 1, FlxColor.BLACK);
+		underlayPlayer.scrollFactor.set();
+		underlayPlayer.alpha = ClientPrefs.underlayAlpha;
+		underlayPlayer.visible = false;
+		add(underlayPlayer);
+
+		underlayOpponent = new FlxSprite(0, 0).makeGraphic(1, 1, FlxColor.BLACK);
+		underlayOpponent.scrollFactor.set();
+		underlayOpponent.alpha = ClientPrefs.underlayAlpha;
+		underlayOpponent.visible = false;
+		add(underlayOpponent);
 
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
