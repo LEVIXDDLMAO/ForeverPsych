@@ -200,7 +200,7 @@ class MainMenuState extends MusicBeatState
 			{
 				if (optionShit[curSelected] == 'donate')
 				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
+					CoolUtil.browserLoad('https://github.com/LEVIXDDLMAO/FNF-Infinity-Engine');
 				}
 				else
 				{
@@ -236,6 +236,10 @@ class MainMenuState extends MusicBeatState
 									#if MODS_ALLOWED
 									case 'mods':
 										MusicBeatState.switchState(new ModsMenuState());
+									#end
+									#if html5
+									case 'mods':
+											MusicBeatState.switchState(new FreeplayState());
 									#end
 									case 'awards':
 										MusicBeatState.switchState(new AchievementsMenuState());
