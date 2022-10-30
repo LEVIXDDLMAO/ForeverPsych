@@ -6071,9 +6071,19 @@
 				"bpm": 190,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"bpm": 190,
+				"changeBPM": false,
+				"mustHitSection": true,
+				"gfSection": false,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"altAnim": false
 			}
 		],
-		"gfVersion": "erect-gf",
+		"gfVersion": "gf",
 		"events": [
 			[
 				0,
@@ -6086,7 +6096,7 @@
 				]
 			],
 			[
-				157.894736842105,
+				157.89473684210526,
 				[
 					[
 						"Add Camera Zoom",
@@ -9096,7 +9106,7 @@
 				]
 			]
 		],
-		"player3": null,
+		"player3": "gf",
 		"song": "dad-battle-erect",
 		"validScore": true,
 		"needsVoices": false,
