@@ -32,4 +32,7 @@ basically normal psych engine!
 - erect diff
 # think thats all :D have fun!!
 hello quick thing if you wanna add shit feel free to fork and push things!
-ill take alook and see if they work :D
+ill take alook and see if they work :D\
+
+# added note skins ( changeable ) butttt
+![](../../../Screenshot%202022-11-11%209.12.21%20PM.png)

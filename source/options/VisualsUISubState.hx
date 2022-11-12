@@ -41,6 +41,14 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
+		var option:Option = new Option('Note Skin',
+			"What note skin do you prefer for playing?",
+			'noteSkinSettings',
+			'string',
+			'Classic',
+			['Classic', 'Circle']);
+		addOption(option);
+
 		var option:Option = new Option('Lane Underlay Visibility',
 			'Sets visibility of lane underlay.',
 			'underlaneVisibility',
