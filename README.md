@@ -35,4 +35,4 @@ hello quick thing if you wanna add shit feel free to fork and push things!
 ill take alook and see if they work :D\
 
 # added note skins ( changeable ) BUT!
-![Alt text](file:///Screenshot%202022-11-11%209.12.21%20PM.png)
+![](noteskin_error.png)
