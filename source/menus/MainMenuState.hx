@@ -230,21 +230,21 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'story_mode':
-										MusicBeatState.switchState(new StoryMenuState());
+										MusicBeatState.switchState(new menus.StoryMenuState());
 									case 'freeplay':
-										MusicBeatState.switchState(new FreeplayState());
+										MusicBeatState.switchState(new menus.FreeplayState());
 									#if MODS_ALLOWED
 									case 'mods':
-										MusicBeatState.switchState(new ModsMenuState());
+										MusicBeatState.switchState(new menus.ModsMenuState());
 									#end
 									#if html5
 									case 'mods':
-											MusicBeatState.switchState(new FreeplayState());
+											MusicBeatState.switchState(new menus.FreeplayState());
 									#end
 									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
+										MusicBeatState.switchState(new menus.AchievementsMenuState());
 									case 'credits':
-										MusicBeatState.switchState(new CreditsState());
+										MusicBeatState.switchState(new menus.CreditsState());
 									case 'options':
 										MusicBeatState.switchState(new options.OptionsState());
 								}
