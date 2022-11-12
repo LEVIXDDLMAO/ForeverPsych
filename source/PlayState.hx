@@ -64,16 +64,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck! - F', 0.2], //From 0% to 19%
-		['Shit - E', 0.4], //From 20% to 39%
-		['Bad - E+', 0.5], //From 40% to 49%
-		['Bruh - B', 0.6], //From 50% to 59%
-		['Meh - B+', 0.69], //From 60% to 68%
+		['You Suck!', 0.2], //From 0% to 19%
+		['Shit', 0.4], //From 20% to 39%
+		['Bad', 0.5], //From 40% to 49%
+		['Bruh', 0.6], //From 50% to 59%
+		['Meh', 0.69], //From 60% to 68%
 		['Niceeee', 0.7], //69%
-		['Good - A', 0.8], //From 70% to 79%
-		['Great - A+', 0.9], //From 80% to 89%
-		['Sick! - S', 1], //From 90% to 99%
-		['Perfect!! - S+', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['Good', 0.8], //From 70% to 79%
+		['Great', 0.9], //From 80% to 89%
+		['Sick!', 1], //From 90% to 99%
+		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
