@@ -159,6 +159,8 @@ class PlayState extends MusicBeatState
 	private var timeBarBG:AttachedSprite;
 	public var timeBar:FlxBar;
 	
+	private var feWatermark:FlxText;
+	
 	public var sicks:Int = 0;
 	public var goods:Int = 0;
 	public var bads:Int = 0;
@@ -1031,6 +1033,12 @@ class PlayState extends MusicBeatState
 		add(botplayTxt);
 		if(ClientPrefs.downScroll) {
 			botplayTxt.y = timeBarBG.y - 78;
+
+			feWatermark = new FlxText(0, 0, 0, "FOREVER ENGINE LEGACY v" + menus.MainMenuState.feEngineVersion, 18);
+			feWatermark.setFormat(Paths.font("vcr.ttf"), 18, FlxColor.WHITE);
+			feWatermark.setBorderStyle(OUTLINE, FlxColor.BLACK, 2);
+			feWatermark.setPosition(FlxG.width - (feWatermark.width + 5), 5);
+			add(feWatermark);
 		}
 
 		strumLineNotes.cameras = [camHUD];
@@ -1046,6 +1054,7 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+		feWatermark.cameras = [camHUD];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;

@@ -41,25 +41,25 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
-		var option:Option = new Option('Note Skin',
-			"What note skin do you prefer for playing?",
-			'noteSkinSettings',
-			'string',
-			'Classic',
-			['Classic', 'Circle']);
-		addOption(option);
+		// var option:Option = new Option('Note Skin',
+			//"What note skin do you prefer for playing?",
+			//'noteSkinSettings',
+			//'string',
+			//'Classic',
+			//['Classic', 'Circle']);
+		//addOption(option);
 
-		var option:Option = new Option('Lane Underlay Visibility',
-			'Sets visibility of lane underlay.',
-			'underlaneVisibility',
-			'percent',
-			0);
-		addOption(option);	
-		option.scrollSpeed = 1;
-		option.minValue = 0.0;
-		option.maxValue = 1;
-		option.changeValue = 0.1;
-		option.decimals = 1;
+		//var option:Option = new Option('Lane Underlay Visibility',
+			//'Sets visibility of lane underlay.',
+			//'underlaneVisibility',
+			//'percent',
+			//0);
+		//addOption(option);	
+		//option.scrollSpeed = 1;
+		//option.minValue = 0.0;
+		//option.maxValue = 1;
+		//option.changeValue = 0.1;
+		//option.decimals = 1;
 
 		var option:Option = new Option('Hide HUD',
 			'If checked, hides most HUD elements.',

@@ -2,8 +2,8 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin' Infinity Engine" file="InfinityEngine" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="0.5.1" company="ShadowMario" />
-	<app title="Infinity Engine" if="web" />
+	<app title="Friday Night Funkin'- Forever Psych" file="ForeverPsych" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="0.3.1" company="ShadowMario" />
+	<app title="Forever Psych" if="web" />
 
 	<!-- NOTE TO SELF: DISABLE THIS IF ISSUES ARE FOUND -->
 	<haxedef name="LINC_LUA_RELATIVE_DYNAMIC_LIB"/> <!-- stable luas PUT AFTER FIRST LINE WITH APP NAME AND ETC -->
@@ -40,8 +40,6 @@
 
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3"  unless="web"/>
-	<assets path="example_mods" rename="mods" exclude="*.ogg" if="web"/>
-	<assets path="example_mods" rename="mods" exclude="*.mp3"  unless="web"/>
 	
 	<!-- PSYCH ENGINE CUSTOMIZATION -->
 	<define name="MODS_ALLOWED" if="desktop" />
