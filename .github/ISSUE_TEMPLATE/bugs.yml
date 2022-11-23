@@ -1,5 +1,5 @@
 name: Bug report
-description: Report bugs with the engine here
+description: Report bugs with the engine here!
 labels: [bug]
 body:
   - type: textarea
@@ -22,7 +22,6 @@ body:
     attributes:
       label: "Are you modding a build from source or with Lua?"
       options:
-        - Lua
         - Source
     validations:
       required: true
